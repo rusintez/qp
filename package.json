@@ -1,0 +1,21 @@
+{
+  "name": "@rusintez/qp",
+  "version": "1.0.0",
+  "description": "Filter arrays using SQL like querystring",
+  "main": "index.js",
+  "scripts": {
+    "build": "pegjs -o parser.js grammar.pegjs",
+    "postinstall": "npm run build",
+    "publish": "npm publish --access=public"
+  },
+  "author": "Vladimir Popov <rusintez@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "pegjs": "^0.10.0",
+    "sift": "^3.2.6"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.2",
+    "microtime": "^2.1.2",
+  }
+}

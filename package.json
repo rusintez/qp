@@ -4,7 +4,10 @@
   "description": "Filter arrays using SQL like querystring",
   "main": "index.js",
   "scripts": {
-    "build": "pegjs -o parser.js grammar.pegjs",
+    "build": "pegjs -o lib/qp/parser.js grammar.pegjs",
+    "lint": "eslint --fix lib/qp/index.js lib/qp/native.js lib/qp/sift.js",
+    "test": "mocha -R spec -b test",
+    "cover": "nyc --reporter html --reporter text --include api --exclude api/config --all npm test",
     "postinstall": "npm run build",
     "publish": "npm publish --access=public"
   },
@@ -16,6 +19,9 @@
   },
   "devDependencies": {
     "benchmark": "^2.1.2",
-    "microtime": "^2.1.2"
+    "chai": "^4.1.2",
+    "microtime": "^2.1.2",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0"
   }
 }

@@ -1,5 +1,6 @@
 node_modules
 .DS_Store
 npm-debug.log
-parser.js
-dev.js
+lib/qp/parser.js
+coverage
+.nyc_output

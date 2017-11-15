@@ -1,8 +1,9 @@
 # qp
 
+[![Build Status](http://ci.runcible.co/api/badges/rusintez/qp/status.svg)](http://ci.runcible.co/rusintez/qp)
 Filter arrays using SQL like querystring
 
-### Installation 
+### Installation
 
     $ npm install @rusintez/qp --save
 
@@ -82,7 +83,7 @@ var siftFilteredList = filter(query, list, 'sift');
 
 ##### INCLUDES
 
-`tags INCLUDES ["russia", "china"]` — true when tags include *both* russia and china 
+`tags INCLUDES ["russia", "china"]` — true when tags include *both* russia and china
 `tags IN ["us", "uk"]` — shorthand, same as above
 
 ##### Flags
@@ -105,7 +106,7 @@ a = 5 OR (b = 10 AND c > 0) AND NOT tags IN ["blacklisted"]
 
 `"hello world"` — strings must be surrounded by double quotes
 
-##### Number 
+##### Number
 
 `5` - for now only non-negative integers are supported, more coming soon
 
@@ -132,11 +133,11 @@ var assert = require('assert');
 
 var tree = parser.parse('license_types INCLUDES 7');
 
-assert.deepEqual(tree, { 
+assert.deepEqual(tree, {
   token: 'INCLUDES',
   key: 'license_types',
-  value: { 
-    token: 'NUMBER', 
+  value: {
+    token: 'NUMBER',
     value: 7
   }
 });
